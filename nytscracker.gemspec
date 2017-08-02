@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = "Basically a wrapper for JP's Go package to crack the NYTS"
   s.authors     = ["Scott Feinberg"]
   s.email       = 'scott.feinberg@nytimes.com'
-  s.files         = Dir.glob('lib/*.rb') + Dir.glob('ext/nytscracker/*')
+  s.files         = Dir.glob('lib/*.rb') + Dir.glob('ext/nytscracker/*') + Dir.glob('ext/nytscracker/vendor/github.com/nytm/go-nytcookie/*')
   s.homepage    = ""
   s.license       = 'MIT'
   s.extensions = %w[ext/nytscracker/extconf.rb]
