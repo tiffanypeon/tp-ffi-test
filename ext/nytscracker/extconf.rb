@@ -1,4 +1,2 @@
-puts "running make"
-puts `pwd`
-puts `cat Makefile`
-`make build`
+puts "running make install"
+`make install`
