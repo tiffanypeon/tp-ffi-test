@@ -4,9 +4,11 @@ build:
     - AWS_DEFAULT_REGION=$$NP_AWS_DEFAULT_REGION
     - AWS_ACCESS_KEY_ID=$$NP_AWS_ACCESS_KEY_ID
     - AWS_SECRET_ACCESS_KEY=$$NP_AWS_SECRET_ACCESS_KEY
+    - 'NYTS_SECRET=$$NYTS_SECRET'
     - GOPATH=/drone
   commands:
     - export PATH=$PATH:/usr/local/go/bin
+    - sed -i 's@NYTS_SECRET_PLACE_HOLDER@'"$NYTS_SECRET"'@' nytscracker.go
     - ./build.sh
     - ./dist.sh
   when:

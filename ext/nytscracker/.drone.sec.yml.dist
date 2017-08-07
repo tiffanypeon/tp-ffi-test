@@ -1,0 +1,6 @@
+
+# Do not include real secret values in this file.
+# Commit this so all developers know what variables are required to run the application if they update .drone.sec.
+---
+environment:
+  NYTS_SECRET: "SOMETHING"

@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'nytscracker'
-  s.version     = '0.1.3'
+  s.version     = '0.1.4'
   s.date        = '2017-08-01'
   s.summary     = "Cracks the NYTS and gives it to you in JSON"
   s.description = "Basically a wrapper for JP's Go package to crack the NYTS"

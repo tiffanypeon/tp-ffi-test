@@ -4,26 +4,16 @@ import "C"
 import (
 	"encoding/json"
 	"fmt"
-	"os"
-	"strings"
 
 	nytcookie "github.com/nytm/go-nytcookie"
 )
 
+const nyts_secret = "NYTS_SECRET_PLACE_HOLDER"
+
 //export crackRaw
 func crackRaw(data *C.char) *C.char {
-	// Use `os.Environ` to list all key/value pairs in the
-	// environment. This returns a slice of strings in the
-	// form `KEY=value`. You can `strings.Split` them to
-	// get the key and value. Here we print all the keys.
-	fmt.Println("Start of Environment Dump")
-	for _, e := range os.Environ() {
-		pair := strings.Split(e, "=")
-		fmt.Println(pair[0])
-	}
-
 	nyts := C.GoString(data)
-	client, err := nytcookie.NewClient(os.Getenv("NYTS_SECRET"), "")
+	client, err := nytcookie.NewClient(string(nyts_secret), "")
 	if err != nil {
 		fmt.Printf("Error creating client %v", err)
 	}
