@@ -9,7 +9,7 @@ export S3_CACHE=s3://np-ops/$APP/rubygems/
 
 gem install builder
 
-gem build nytscracker.gemspec
+gem build printcracker.gemspec
 aws s3 sync . $S3_CACHE/gems --exclude "*" --include "*.gem"
 
 # Setup a temporary working dir

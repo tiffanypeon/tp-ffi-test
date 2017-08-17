@@ -1,4 +1,4 @@
-build: 
+build:
   image: scottefein/buildbox:buildbox
   environment:
     - AWS_DEFAULT_REGION=$$NP_AWS_DEFAULT_REGION
@@ -8,7 +8,7 @@ build:
     - GOPATH=/drone
   commands:
     - export PATH=$PATH:/usr/local/go/bin
-    - sed -i 's@NYTS_SECRET_PLACE_HOLDER@'"$NYTS_SECRET"'@' nytscracker.go
+    - sed -i 's@NYTS_SECRET_PLACE_HOLDER@'"$NYTS_SECRET"'@' printcracker.go
     - ./build.sh
     - ./dist.sh
   when:
