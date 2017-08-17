@@ -9,6 +9,4 @@
 curl -sS -o printcracker_linux.so https://s3.amazonaws.com/np-ops/cooking/ruby-go-nyts-wrapper/printcracker_linux.so
 curl -sS -o printcracker_linux.h https://s3.amazonaws.com/np-ops/cooking/ruby-go-nyts-wrapper/printcracker_linux.h
 
-curl -sS -o printcracker_macosx.so https://s3.amazonaws.com/np-ops/cooking/ruby-go-nyts-wrapper/printcracker_macosx.so
-curl -sS -o printcracker_macosx.h https://s3.amazonaws.com/np-ops/cooking/ruby-go-nyts-wrapper/printcracker_macosx.h
 
